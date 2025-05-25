@@ -1,19 +1,22 @@
 import React from 'react';
-import Class from './category.module.css'
+import Class from './category.module.css';
+import { Link } from 'react-router-dom';
 
 
 
 
 export default function CategoryCard({data}) {
+  const base_url="https://fakestoreapi.com/products/categories"
   return (
     <div className={Class.category}>
-      <a href="">
+      <Link to={`/category/${data.name}`}>
         <span>
             <h2>{data.title}</h2>
         </span>
         <img src={data.image} alt={data.name } />
         <p>shope now</p>
-      </a>
+      </Link>
     </div>
   )
 }
+//`${ base_url}/${data.name}`

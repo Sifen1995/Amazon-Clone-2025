@@ -5,14 +5,16 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import logo from '../../assets/amazone_logo.png';
 import  Classes from './header.module.css';
 import LowerHeader from '../lowerHeader/LowerHeader';
+import { Link } from 'react-router-dom';
+
 
 export default function Header() {
   return (
     <>
        <div className={Classes.header__container}>
         <div className={Classes.logo__container}>
-            <a href="/">
-            <img src={logo} alt="amazonelogo" /></a>
+            <Link to={"/"}>
+            <img src={logo} alt="amazonelogo" /></Link>
             <div className={Classes.delivery}>
             <span><LocationOnOutlinedIcon/> </span>
             <div>
@@ -31,27 +33,27 @@ export default function Header() {
         </div>
 
         <div className={Classes.order__container}>
-                <a href="" className={Classes.language}>
+                <Link href="" className={Classes.language}>
                 <img src="https://icons.iconarchive.com/icons/wikipedia/flags/256/US-United-States-Flag-icon.png" alt="" />
                 <select name='' id=''>
                     <option value="">EN</option>
                 </select>
-                </a>
-                <a href="">
+                </Link>
+                <Link to={"/auth"}>
                     
                         <p>Sign In</p>
                         <span>Accoount & Lists</span>
                     
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to={"/orders"}>
                     <p>return</p>
                     <span>& Orders</span>
-                </a>
-                <a to={"/cart"} className={Classes.cart}>
+                </Link>
+                <Link to={"/cart"} className={Classes.cart}>
                     <ShoppingCartOutlinedIcon size={40}/> 
                     <span>0</span>
-                </a>
+                </Link>
            
         </div>
        </div>

@@ -11,7 +11,7 @@ export const categoryImage=[
     },
     {
       title:"Men's Clothing",
-      name:"Men's Clothing",
+      name:"men's clothing",
       image:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
     },
     {

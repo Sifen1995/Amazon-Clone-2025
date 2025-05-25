@@ -1,14 +1,21 @@
 import React from 'react';
-import Header from '../../components/header/Header';
+import Layout from '../../components/layout/Layout';
+import Carousele from '../../components/carousel/carousel';
+import Category from '../../components/category/Category';
+import Product from '../../components/product/product';
+
+
 
 
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
-      
-    </div>
+    <Layout>
+     
+      <Carousele/>
+        <Category/>
+        <Product/>
+    </Layout>
   )
 }
 
