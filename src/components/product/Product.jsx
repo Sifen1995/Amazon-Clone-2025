@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard'; 
 import axios from 'axios'; 
-import Class from './product.module.css'
+import Class from './product.module.css';
+import Loader from '../loader/Loader';
 
-export default function Product() {
+export default function Productt() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(null);   
   useEffect(() => {
     
@@ -13,7 +14,7 @@ export default function Product() {
     axios.get('https://fakestoreapi.com/products')
       .then(response => {
         setProducts(response.data); 
-      })
+             })
       .catch(error => {
         console.error('Error fetching products:', error);
         setError(error); 
@@ -22,26 +23,27 @@ export default function Product() {
         setLoading(false);
       });
   }, []); 
+  console.log(products)
 
-    if (loading) {
-    return <div>Loading products...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message || 'An unexpected error occurred.'}</div>;
-  }
-
+   
   return (
-    <div className={Class.product__list} >
+    <>
+    {
+      loading?(<Loader/>): (
+          <div className={Class.product__list}  >
      {products.length > 0 ? (
         products.map((product) => (
           <div  >
-            <ProductCard item={product} key={product.id}/>
+            <ProductCard key={product.id} item={product}  renderAdd={true}/>
           </div>
         ))
       ) : (
         <div>No products found.</div> 
       )}
     </div>
+      )
+    }
+   
+    </>
   );
 }

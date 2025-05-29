@@ -6,8 +6,8 @@ export const categoryImage=[
     },
     {
         title:"Discover Fashion trends",
-        name:"women's clothing",
-        image:"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+        name:"women's clothing",        
+        image:"https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29tZW4lMjBmYXNoaW9ufGVufDB8fDB8fHww"
     },
     {
       title:"Men's Clothing",
@@ -17,7 +17,8 @@ export const categoryImage=[
     {
       title:"Jewelery",
       name:"jewelery",
-      image:"https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29tZW4lMjBmYXNoaW9ufGVufDB8fDB8fHww"
+      image:"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+      
     }
 
 ]

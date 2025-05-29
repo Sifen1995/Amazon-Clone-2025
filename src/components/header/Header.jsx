@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -6,11 +6,17 @@ import logo from '../../assets/amazone_logo.png';
 import  Classes from './header.module.css';
 import LowerHeader from '../lowerHeader/LowerHeader';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../DataProvider/DataProvider';
 
 
 export default function Header() {
+    const {basket,dispatch} =useContext(DataContext )
+    const totalItem=basket?.reduce((amount,item)=>{
+      return item.amount +amount
+    },0)
   return (
     <>
+     <section className={Classes.fixed}>
        <div className={Classes.header__container}>
         <div className={Classes.logo__container}>
             <Link to={"/"}>
@@ -52,12 +58,13 @@ export default function Header() {
                 </Link>
                 <Link to={"/cart"} className={Classes.cart}>
                     <ShoppingCartOutlinedIcon size={40}/> 
-                    <span>0</span>
+                    <span>{totalItem}</span>
                 </Link>
            
         </div>
        </div>
        <LowerHeader/>
+     </section>  
     </>
   )
 }

@@ -5,6 +5,7 @@ import Cart from './pages/cart/cart';
 import Payment from './pages/payment/Payment';
 import Orders from './pages/orders/Orders';
 import Result from './pages/results/Result';
+import ProductDetail from './pages/productDetail/ProductDetail';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 export default function Routing() {
@@ -16,7 +17,8 @@ export default function Routing() {
         <Route path='/payment' element={<Payment/>}/>
         <Route path='/auth' element={<Signup/>}/>
         <Route path='/orders' element={<Orders/>}/>
-         <Route path='/category/:categoryName' element={<Result/>}/>
+        <Route path='/category/:categoryName' element={<Result/>}/>
+        <Route path='/products/:id' element={<ProductDetail/>}/>
       </Routes>
     </Router>
   )

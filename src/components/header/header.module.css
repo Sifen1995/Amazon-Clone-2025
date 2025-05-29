@@ -102,16 +102,21 @@
 .cart span{
     position: absolute;
     font-weight: bold;
-    top: 0px;
+    top: -12px;
     font-size: 20px;
     background-color: #1a1a1a;
-    left: 16px;
+    left: 8px;
     color: orange;
 }
 .language:hover, .delivery:hover, .logo__container img:hover, .order__container> *:nth-child(2):hover, .order__container> *:nth-child(3):hover{
     border: 1px solid white;
     padding: 10px;
     border-radius: 3px;
+}
+.fixed{
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 @media screen and (max-width:576px){

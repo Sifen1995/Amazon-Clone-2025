@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function CategoryCard({data}) {
-  const base_url="https://fakestoreapi.com/products/categories"
+ 
   return (
     <div className={Class.category}>
       <Link to={`/category/${data.name}`}>
