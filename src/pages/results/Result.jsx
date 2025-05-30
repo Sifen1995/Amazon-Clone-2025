@@ -2,7 +2,8 @@ import React,{useEffect,useState} from 'react';
 import { useParams } from 'react-router-dom';
 import  axios  from 'axios';
 import Class from './results.module.css'
-import ResultsCard from './ResultsCard';
+import ProductCard from '../../components/product/ProductCard';
+
 
 export default function Result() {
 
@@ -27,7 +28,8 @@ export default function Result() {
     <div className={Class.card_list}>     
       {product.map((p)=>(
           <div > 
-            <ResultsCard item={p}/>
+           
+            <ProductCard item={p} renderAdd={true}/>
           </div>
       ))}   
 

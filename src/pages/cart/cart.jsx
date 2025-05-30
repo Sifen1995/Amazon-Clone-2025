@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import Layout from '../../components/layout/Layout';
 import { DataContext } from '../../components/DataProvider/DataProvider';
 import ProductCard from '../../components/product/ProductCard';
-import { SiTrueup } from 'react-icons/si';
 import CurrencyFormat from '../../components/currencyFormat/CurrencyFormat';
 import { Link } from 'react-router-dom';
 import Class from './cart.module.css';
